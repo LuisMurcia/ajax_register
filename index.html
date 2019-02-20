@@ -1,0 +1,83 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>Register Users</title>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <script src="js.js"></script>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-secondary text-uppercase py-2" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand js-scroll-trigger text-white" href="#">Register Users</a>
+        <button class="navbar-toggler navbar-toggler-right text-uppercase text-white btn bg-primary" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          Menu
+          <i class="fas fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto mt-3">
+            <li class="nav-item dropdown p-0">
+              <form class="form-inline my-2 my-lg-0 p-3">
+                <div class="input-group input-group-sm">
+                  <input type="search" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm" placeholder="Search..." id="search">
+                  <div class="input-group-append">
+                    <button type="button" class="btn btn-secondary btn-number">
+                      <i class="fa fa-search"></i>
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="container-fluid">
+        <div class="row">
+          <div class="col-sm-3 p-0">
+            <form id="addnew-form">
+                <label id="first">Name 
+                    <input type="text" class="alltype" maxlength="30" id="name" name="name" required>
+                </label>
+                <label id="email">E-mail 
+                    <input type="email" class="alltype" pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" id="email" name="email" required>
+                </label>
+                <label id="phone">Phone number 
+                    <input type="tel" class="alltype" maxlength="9" pattern="[0-9]{9}" id="phone" name="phone" required>
+                </label>
+                <label>Departments 
+                    <select id="departamento" name="departamento"></select></label>
+                <label>Job 
+                    <select id="puesto" name="puesto"></select></label>
+                <input id="addnew" type="submit" class="btn btn-primary py-2 text-center" value="Add">
+            </form>
+          </div>
+
+          <div class="col-sm-9" id="viewusers">
+            <br>
+            <h5 class="text-center">View Tables</h5>
+              <table class='table thead-dark table-hover table-bordered' id="tableusers">
+                <thead>
+                  <tr>
+                    <th>Nombre</th>
+                    <th>Email</th>
+                    <th>Telefono</th>
+                    <th>Departamento</th>
+                    <th>Puesto</th>
+                  </tr>
+                </thead>
+                <tbody>
+                </tbody>
+              </table>
+          </div>
+        </div>
+    </div>
+</body>
